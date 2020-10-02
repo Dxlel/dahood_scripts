@@ -1,7 +1,4 @@
--- // krnlly cracked by Misamiru#8232
--- // its just change the id of your crew
--- // if they remove their model, probs im going to change it
--- // enjoy lol
+-- // krnlly without joining the crew or group by Misamiru#8232
 
 local ps = game:GetService("Players")
 local lp = ps.LocalPlayer
