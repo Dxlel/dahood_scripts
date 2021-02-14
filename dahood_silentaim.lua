@@ -72,6 +72,8 @@
 
 ]]
 
+getgenv().TECHWARESILENTAIM_LOADED = true
+
 -- // servicios
 local DAHOODPLAYERS = game:GetService("Players")
 local thisaudiowasmadebytueniSEXdrip = game:GetService("StarterGui")
@@ -87,6 +89,15 @@ local drizzy_groomer = {
   ["activado"] = true,
   ["victima"] = nil,
 }
+
+-- // evita ejecutar el script si ya se ejecuto antes o el juego no es da hood
+if game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
+	thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
+	    Title="TECHWARE 最好的代碼",
+	    Text = "EL JUEGO NO ES DA HOOD/EL SCRIPT YA FUE EJECUTADO ANTES"
+	})
+    	return
+end
 
 -- // creditos (si de verdad eliminas/editas esto para poner tus creditos, sos la persona mas triste del mundo)
 thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
