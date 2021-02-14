@@ -72,8 +72,6 @@
 
 ]]
 
-getgenv().TECHWARESILENTAIM_LOADED = true
-
 -- // servicios
 local DAHOODPLAYERS = game:GetService("Players")
 local thisaudiowasmadebytueniSEXdrip = game:GetService("StarterGui")
@@ -98,6 +96,8 @@ if game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
 	})
     	return
 end
+
+getgenv().TECHWARESILENTAIM_LOADED = true
 
 -- // creditos (si de verdad eliminas/editas esto para poner tus creditos, sos la persona mas triste del mundo)
 thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
