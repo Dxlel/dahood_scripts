@@ -85,11 +85,11 @@ local doxxeados_asesinos = getrawmetatable(game)
 local dahood = doxxeados_asesinos.__namecall
 local drizzy_groomer = {
   ["activado"] = true,
-  ["victima_de_grooming"] = game.Players.legoman666,
+  ["victima_de_grooming"] = nil,
 }
 
 -- // evita ejecutar el script si ya se ejecuto antes o el juego no es da hood
-if TECHWARESILENTAIM_LOADED then --game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
+if game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
 	thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
 	    Title="TECHWARE 最好的代碼",
 	    Text = "EL JUEGO NO ES DA HOOD/EL SCRIPT YA FUE EJECUTADO ANTES"
