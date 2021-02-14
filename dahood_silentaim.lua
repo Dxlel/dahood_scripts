@@ -85,11 +85,11 @@ local doxxeados_asesinos = getrawmetatable(game)
 local dahood = doxxeados_asesinos.__namecall
 local drizzy_groomer = {
   ["activado"] = true,
-  ["victima"] = nil,
+  ["victima_de_grooming"] = game.Players.legoman666,
 }
 
 -- // evita ejecutar el script si ya se ejecuto antes o el juego no es da hood
-if game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
+if TECHWARESILENTAIM_LOADED then --game.PlaceId ~= 2788229376 or TECHWARESILENTAIM_LOADED then
 	thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
 	    Title="TECHWARE 最好的代碼",
 	    Text = "EL JUEGO NO ES DA HOOD/EL SCRIPT YA FUE EJECUTADO ANTES"
@@ -105,7 +105,7 @@ thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
     Text = "AIMLOCK ACTIVADO\nHECHO POR CUTE_MISAEL"
 })
 
-wait(1)
+wait(1.5)
 
 thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
     Title="TECHWARE 最好的代碼",
@@ -133,14 +133,10 @@ function matar_y_violar_su_cuerpo_putrefacto_como_haria_kiIIuli(victima)
     return DAHOODPLAYERS:GetPlayerFromCharacter(victima)
 end
 
-function groomear(pedofilo,victima,esmujer,esmenor)
+function groomear(pedofilo,victima,genitales,esmujer,esmenor)
 	if pedofilo == "Drizzy" and victima and esmujer and esmenor then
-        if victim.Character:FindFirstChild(PartName) then
-            return victima.Character[PartName].Position + victima.Character.UpperTorso.Velocity * 0.165
-        else
-            return victima.Character.Head.Position + victima.Character.UpperTorso.Velocity * 0.165
-        end
-    end
+		return victima.Character[genitales].Position + victima.Character.UpperTorso.Velocity * 0.165
+    	end
 end
 
 function espedofilo(jugadorDeDH,fdmg)
@@ -163,7 +159,7 @@ mordida_del_87.KeyDown:Connect(function(AMONGUS)
                 victima_de_grooming = victima_de_grooming.Parent.Parent
             end
             if victima_de_grooming:FindFirstChild("Humanoid") and esautista(victima_de_grooming) then
-                drizzy_groomer.victima = matar_y_violar_su_cuerpo_putrefacto_como_haria_kiIIuli(victima_de_grooming)
+                drizzy_groomer.victima_de_grooming = matar_y_violar_su_cuerpo_putrefacto_como_haria_kiIIuli(victima_de_grooming)
                 thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
                     Title = "TECHWARE 最好的代碼",
                     Text = "aimlock activado en: "..victima_de_grooming.Name
@@ -171,9 +167,9 @@ mordida_del_87.KeyDown:Connect(function(AMONGUS)
            end
         end
     elseif AMONGUS:lower() == teclas.tecla2:lower() then
-        if drizzy_groomer.victima then
-            local anterior_victima = drizzy_groomer.victima
-            drizzy_groomer.victima = nil
+        if drizzy_groomer.victima_de_grooming then
+            local anterior_victima = victima_de_grooming.victima_de_grooming
+            drizzy_groomer.victima_de_grooming = nil
             thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
                 Title = "TECHWARE 最好的代碼",
                 Text = "aimlock desactivado en: "..anterior_victima.Name
@@ -201,8 +197,8 @@ setreadonly(doxxeados_asesinos,false)
 doxxeados_asesinos.__namecall = newcclosure(function(self,...) 
 	local metodos_de_audios_de_dripin = {...}
 	local creacion_de_audios_loud = getnamecallmethod()
-	if creacion_de_audios_loud == "FireServer" and espedofilo("Drizzy",self) and metodos_de_audios_de_dripin[1] == "UpdateMousePos" and drizzy_groomer["activado"] and drizzy_groomer["victima"] then 
-		metodos_de_audios_de_dripin[2] = groomear("Drizzy",drizzy_groomer["victima"],true,true)
+	if creacion_de_audios_loud == "FireServer" and espedofilo("Drizzy",self) and metodos_de_audios_de_dripin[1] == "UpdateMousePos" and drizzy_groomer["activado"] and drizzy_groomer["victima_de_grooming"] then 
+		metodos_de_audios_de_dripin[2] = groomear("Drizzy",drizzy_groomer["victima_de_grooming"],PartName or "Head",true,true)
 	end
 	return dahood(self,unpack(metodos_de_audios_de_dripin))
 end)
