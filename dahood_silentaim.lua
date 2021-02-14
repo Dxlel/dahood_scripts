@@ -135,8 +135,12 @@ end
 
 function groomear(pedofilo,victima,esmujer,esmenor)
 	if pedofilo == "Drizzy" and victima and esmujer and esmenor then
-		return victima.Character.Head.Position + victima.Character.UpperTorso.Velocity * 0.165
-	end
+        if victim.Character:FindFirstChild(PartName) then
+            return victima.Character[PartName].Position + victima.Character.UpperTorso.Velocity * 0.165
+        else
+            return victima.Character.Head.Position + victima.Character.UpperTorso.Velocity * 0.165
+        end
+    end
 end
 
 function espedofilo(jugadorDeDH,fdmg)
