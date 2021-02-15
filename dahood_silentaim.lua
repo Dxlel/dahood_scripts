@@ -168,7 +168,7 @@ mordida_del_87.KeyDown:Connect(function(AMONGUS)
         end
     elseif AMONGUS:lower() == teclas.tecla2:lower() then
         if drizzy_groomer.victima_de_grooming then
-            local anterior_victima = victima_de_grooming.victima_de_grooming
+            local anterior_victima = drizzy_groomer.victima_de_grooming
             drizzy_groomer.victima_de_grooming = nil
             thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
                 Title = "TECHWARE 最好的代碼",
