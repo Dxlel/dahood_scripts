@@ -99,6 +99,15 @@ end
 
 getgenv().TECHWARESILENTAIM_LOADED = true
 
+-- // para los bobos que usan versiones anteriores
+if not SASettings then
+    getgenv().SASettings = {
+        ["pornografia"] = 0.165,
+        ["predice_movimientos"] = true,
+        ["lockear_a"] = "Head",
+    }
+end
+
 -- // creditos (si de verdad eliminas/editas esto para poner tus creditos, sos la persona mas triste del mundo)
 thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
     Title="TECHWARE 最好的代碼",
@@ -135,8 +144,12 @@ end
 
 function groomear(pedofilo,victima,genitales,esmujer,esmenor)
 	if pedofilo == "Drizzy" and victima and esmujer and esmenor then
-		return victima.Character[genitales].Position + victima.Character.UpperTorso.Velocity * 0.165
-    	end
+        if SASettings.predice_movimientos then
+            return victima.Character[genitales].Position + victima.Character.UpperTorso.Velocity * SASettings.pornografia
+        else
+            return victima.Character[genitales].Position
+        end
+    end
 end
 
 function espedofilo(jugadorDeDH,fdmg)
@@ -198,7 +211,7 @@ doxxeados_asesinos.__namecall = newcclosure(function(self,...)
 	local metodos_de_audios_de_dripin = {...}
 	local creacion_de_audios_loud = getnamecallmethod()
 	if creacion_de_audios_loud == "FireServer" and espedofilo("Drizzy",self) and metodos_de_audios_de_dripin[1] == "UpdateMousePos" and drizzy_groomer["activado"] and drizzy_groomer["victima_de_grooming"] then 
-		metodos_de_audios_de_dripin[2] = groomear("Drizzy",drizzy_groomer["victima_de_grooming"],PartName or "Head",true,true)
+		metodos_de_audios_de_dripin[2] = groomear("Drizzy",drizzy_groomer["victima_de_grooming"],SASettings.lockear_a or "Head",true,true)
 	end
 	return dahood(self,unpack(metodos_de_audios_de_dripin))
 end)
