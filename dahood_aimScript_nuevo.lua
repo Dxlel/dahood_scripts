@@ -319,7 +319,7 @@ FIVE_NIGHTS_AT_FREDDYS_IS_GOING_TO_BE_REAL_IN_60_SECONDS:BindToRenderStep("HONG 
             	ir_a_hong_kong(
 			CFrame.new(
 				camara_de_la_porno.CoordinateFrame.p, 
-				CFrame.new(drizzy_groomer["victima_de_grooming"][nombre_del_genital].Position - Vector3.new(0,techware_aimlock["configuracion general"].Y,0)).p 
+				CFrame.new(drizzy_groomer["victima_de_grooming"].Character[nombre_del_genital].Position - Vector3.new(0,techware_aimlock["configuracion general"].Y,0)).p 
 			)
 		)
         end
