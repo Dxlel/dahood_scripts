@@ -192,8 +192,9 @@ function muerte(mongolico)
     local feo = mongolico.Character
 	if feo:FindFirstChild("BodyEffects") and feo.BodyEffects:FindFirstChild("K.O") then
 		hong_kong = feo.BodyEffects["K.O"].Changed:Connect(function()
-			if feo.BodyEffects["K.O"].Value == true and drizzy_pedofilo["victima_de_grooming"] == mogolico then
+			if feo.BodyEffects["K.O"].Value == true and drizzy_pedofilo["victima_de_grooming"] == mongolico then
 				drizzy_groomer.activado = false
+				drizzy_groomer.victima_de_grooming = nil
 				THISAUDIOWASMADEBYDRIZZY.CameraMode = Enum.CameraMode.Classic
 				thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
 					Title="TECHWARE 最好的代碼",
@@ -204,8 +205,9 @@ function muerte(mongolico)
 		end)
 	end
 	china = feo.Humanoid.Died:Connect(function()
-		if feo.BodyEffects["K.O"].Value == true and drizzy_pedofilo["victima_de_grooming"] == mogolico then
+		if drizzy_pedofilo["victima_de_grooming"] == mongolico then
 			drizzy_groomer.activado = false
+			drizzy_groomer.victima_de_grooming = nil
 			THISAUDIOWASMADEBYDRIZZY.CameraMode = Enum.CameraMode.Classic
 			thisaudiowasmadebytueniSEXdrip:SetCore("SendNotification",{
 				Title="TECHWARE 最好的代碼",
@@ -277,6 +279,8 @@ mordida_del_87.KeyDown:Connect(function(AMONGUS)
                 Title = "TECHWARE 最好的代碼",
                 Text = "aimlock desactivado en: "..anterior_victima.Name
             })
+	    wait(0.3)
+	    THISAUDIOWASMADEBYDRIZZY.CameraMode = Enum.CameraMode.Classic 
         end
     elseif AMONGUS:lower() == TECLAS_PARA_BUSCAR_PORNOGRAFIA.tecla3:lower() then
         if drizzy_groomer.activado == true then
